@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "156691012173",
+    "project_id": "open-source-coding-395120",
+    "storage_bucket": "open-source-coding-395120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156691012173:android:1d718f8d241bf333cb5a04",
+        "android_client_info": {
+          "package_name": "bryd.syrch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156691012173-m73sp0kjejl8jfoqi2kava0e4m525b5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mfTA-ctJ4fojP8f1wfC7BIvDI1mZolM"
+        },
+        {
+          "current_key": "AIzaSyD1p-8_hfdR1OI6BZxcVXaU8cBDRwIPh9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156691012173-m73sp0kjejl8jfoqi2kava0e4m525b5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156691012173:android:d2b87858a8cfd851cb5a04",
+        "android_client_info": {
+          "package_name": "byrd.syrch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156691012173-m73sp0kjejl8jfoqi2kava0e4m525b5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4mfTA-ctJ4fojP8f1wfC7BIvDI1mZolM"
+        },
+        {
+          "current_key": "AIzaSyD1p-8_hfdR1OI6BZxcVXaU8cBDRwIPh9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156691012173-m73sp0kjejl8jfoqi2kava0e4m525b5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

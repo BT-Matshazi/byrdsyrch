@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name"></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google_maps_api_key">AIzaSyBm6y8Zw3TUKdLmSE__-JarbXRHb5LNgc8</string>
+    <string name="mapbox_access_token">
+        pk.eyJ1Ijoia2l5YW42Nzg3IiwiYSI6ImNsbTdwNHprejA0Y3AzZHI3YnlvY3UxbGcifQ.cMFcOG0ZrYLdEE2sCRq8nw
+    </string>
+</resources>
