@@ -611,7 +611,7 @@ class Map : Fragment() {
 
                 responseBody = (response.body() as ArrayList<hotspotsItem>?)!!
                 for (myData in responseBody) {
-                    createDummyList(myData.lat, myData.lng)
+                    createHotspotList(myData.lat, myData.lng)
                 }
                 createMarker()
             }
@@ -647,7 +647,7 @@ class Map : Fragment() {
     }
 
     //creating dummy data
-    private fun createDummyList(lat : Double, long : Double){
+    private fun createHotspotList(lat : Double, long : Double){
         latitudeList.add(lat)
         longitudeList.add(long)
     }
