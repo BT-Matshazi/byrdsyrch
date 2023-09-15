@@ -18,7 +18,6 @@ class Start : AppCompatActivity() {
             var intent= Intent(this,MainActivity2::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onBackPressed() {

@@ -54,7 +54,6 @@ class MainActivity2 : AppCompatActivity() {
         countdown()
     }
 
-
     fun countdown(){
         var duration:Long= TimeUnit.SECONDS.toMillis(10)
 
@@ -65,7 +64,7 @@ class MainActivity2 : AppCompatActivity() {
                     Locale.ENGLISH,
                     "%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished),
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished)- TimeUnit.MINUTES.toSeconds(
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)))
 
                 countDown.text = sDuration
@@ -91,23 +90,19 @@ class MainActivity2 : AppCompatActivity() {
 
         correctAnswerCount++
     }
+
     private fun wrongAns(option: Button){
-
         option.background=resources.getDrawable(R.drawable.wrong)
-
         wrongAnswerCount++
 
     }
 
     private fun gameResult(){
         var intent= Intent(this, Result::class.java)
-
         intent.putExtra("correct",correctAnswerCount.toString())
         intent.putExtra("total",questionsList.size.toString())
-
         startActivity(intent)
     }
-
 
     private fun setAllQuestions() {
         questions.text=Questions.question
@@ -138,10 +133,7 @@ class MainActivity2 : AppCompatActivity() {
         disableButton()
         if(Questions.option1==Questions.answer){
             option1.background=resources.getDrawable(R.drawable.right)
-
-
             correctAns(option1)
-
         }
         else{
             wrongAns(option1)
@@ -152,10 +144,7 @@ class MainActivity2 : AppCompatActivity() {
         disableButton()
         if(Questions.option2==Questions.answer){
             option2.background=resources.getDrawable(R.drawable.right)
-
-
             correctAns(option2)
-
         }
         else{
             wrongAns(option2)
@@ -164,13 +153,8 @@ class MainActivity2 : AppCompatActivity() {
     fun option3Clicked(view: View){
         disableButton()
         if(Questions.option3==Questions.answer){
-
             option3.background=resources.getDrawable(R.drawable.right)
-
-
             correctAns(option3)
-
-
         }
         else{
             wrongAns(option3)
@@ -180,10 +164,7 @@ class MainActivity2 : AppCompatActivity() {
         disableButton()
         if(Questions.option4==Questions.answer){
             option4.background=resources.getDrawable(R.drawable.right)
-
-
             correctAns(option4)
-
         }
         else{
             wrongAns(option4)

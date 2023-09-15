@@ -2,13 +2,10 @@ package byrd.syrch
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import byrd.syrch.databinding.FragmentRareBirdsListBinding
-
 import byrd.syrch.placeholder.PlaceholderContent.RareBirds
-import byrd.syrch.placeholder.PlaceholderContent
 
 /**
  * [RecyclerView.Adapter] that can display a [PlaceholderItem].
@@ -27,7 +24,6 @@ class RareBirdsAdapter(
                 false
             )
         )
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -49,5 +45,4 @@ class RareBirdsAdapter(
             return super.toString() + " '" + birdName.text + "'"
         }
     }
-
 }

@@ -502,7 +502,6 @@ class Map : Fragment() {
             )
             enabled = true
         }
-
         replayOriginLocation()
     }
 
@@ -606,10 +605,8 @@ class Map : Fragment() {
                 call: Call<List<hotspotsItem>?>,
                 response: Response<List<hotspotsItem>?>
             ) {
-
                 // Hide the loading state when the API request is complete
                 binding!!.progressBar.visibility = View.GONE
-
                 responseBody = (response.body() as ArrayList<hotspotsItem>?)!!
                 for (myData in responseBody) {
                     createHotspotList(myData.lat, myData.lng)
@@ -620,7 +617,6 @@ class Map : Fragment() {
             override fun onFailure(call: Call<List<hotspotsItem>?>, t: Throwable) {
                 // Hide the loading state when the API request fails
                 binding!!.progressBar.visibility = View.GONE
-
                 Toast.makeText(context, "Failed to load Hotspots", Toast.LENGTH_SHORT).show()
             }
         })

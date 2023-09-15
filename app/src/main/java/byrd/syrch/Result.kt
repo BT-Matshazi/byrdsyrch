@@ -33,11 +33,8 @@ class Result : AppCompatActivity() {
         if (percentage != null) {
             when {
                 50 <= percentage && percentage <= 99 -> {
-
                     performance.text="GOOD"
                     output.background=resources.getDrawable(R.drawable.bg)
-
-
                 }
                 percentage>=100 -> {
                     performance.text="EXCELLENT"
@@ -48,8 +45,6 @@ class Result : AppCompatActivity() {
                     output.background=resources.getDrawable(R.drawable.wrong)
                 }
             }
-
-
         }
     }
 

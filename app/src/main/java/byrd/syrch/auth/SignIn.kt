@@ -7,7 +7,6 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import byrd.syrch.databinding.ActivitySignInBinding
 
-
 class SignIn : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInBinding
@@ -38,7 +37,6 @@ class SignIn : AppCompatActivity() {
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
                     }
                 }
             } else {

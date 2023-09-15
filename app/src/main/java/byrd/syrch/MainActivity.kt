@@ -3,18 +3,10 @@ package byrd.syrch
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.Fragment
-import byrd.syrch.mapData.hotspotsItem
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //getting user id
         auth = FirebaseAuth.getInstance()
-
         val userId = auth.currentUser?.uid
 
-
+        //checking if user is logged in
         if(auth.currentUser == null){
             val intent = Intent(this, byrd.syrch.auth.AuthOptions::class.java)
             startActivity(intent)
@@ -65,5 +57,4 @@ class MainActivity : AppCompatActivity() {
             commit()
         }
     }
-
 }

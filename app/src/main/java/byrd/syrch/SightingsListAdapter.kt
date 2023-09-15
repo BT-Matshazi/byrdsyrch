@@ -2,11 +2,7 @@ package byrd.syrch
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-
-import byrd.syrch.placeholder.PlaceholderContent.RareBirds
 import byrd.syrch.databinding.FragmentSightingsListBinding
 import byrd.syrch.placeholder.PlaceholderContent
 
@@ -27,7 +23,6 @@ class SightingsListAdapter(
                 false
             )
         )
-
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -43,5 +38,4 @@ class SightingsListAdapter(
             return super.toString() + " '"  + "'"
         }
     }
-
 }
