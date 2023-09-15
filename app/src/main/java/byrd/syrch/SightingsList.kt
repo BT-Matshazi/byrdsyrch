@@ -9,12 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import byrd.syrch.placeholder.PlaceholderContent
+import com.google.firebase.auth.FirebaseAuth
 
 /**
  * A fragment representing a list of Items.
  */
 class SightingsList : Fragment() {
 
+    private lateinit var auth: FirebaseAuth
     private var columnCount = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,10 @@ class SightingsList : Fragment() {
         arguments?.let {
             columnCount = it.getInt(ARG_COLUMN_COUNT)
         }
+
+        auth = FirebaseAuth.getInstance()
+
+        val userId = auth.currentUser?.uid
     }
 
     override fun onCreateView(

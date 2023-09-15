@@ -64,14 +64,13 @@ class AuthOptions : AppCompatActivity() {
         findViewById<Button>(R.id.gSignInBtn).setOnClickListener {
             signInGoogle()
         }
+
         findViewById<Button>(R.id.eSignInBtn).setOnClickListener {
             //redirect to sign up page
             Toast.makeText(this,"email btn clicked", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, byrd.syrch.auth.SignIn::class.java)
             startActivity(intent)
-
         }
-
         //starting the video and looping it indefinitely
         welcomeVideo.start()
     }

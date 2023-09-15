@@ -18,24 +18,16 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var questionsList:ArrayList<Questions>
     private var index:Int = 0
     lateinit var Questions : Questions
-
     private var correctAnswerCount:Int=0
     private var wrongAnswerCount:Int=0
-
     lateinit var countDown: TextView
     lateinit var questions: TextView
     lateinit var option1: Button
     lateinit var option2: Button
     lateinit var option3: Button
     lateinit var option4: Button
-
-
-
-
     private var backPressedTime: Long = 0
     private var backToast: Toast? = null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,8 +41,6 @@ class MainActivity2 : AppCompatActivity() {
         option3=findViewById(R.id.option3)
         option4=findViewById(R.id.option4)
 
-
-
         questionsList= ArrayList()
         questionsList.add(Questions("What is the worlds smallest bird?","A Hawk","A Humming Bird","A Dove"," A Parrot","A Humming Bird"))
         questionsList.add(Questions("What is the worlds tallest bird?","A Flamingo","A Ostrich","A Stalk","A Crow","A Ostrich"))
@@ -58,21 +48,15 @@ class MainActivity2 : AppCompatActivity() {
         questionsList.add(Questions("Which bird is characterised by a yellow bill?","Toucan","Puffin","Ibis","Swan","Toucan"))
         questionsList.add(Questions("What is a group of ravens called?","A Flock","A School","A Spook","A Murder","A Murder"))
 
-
         //questionsList.shuffle()
         Questions= questionsList[index]
-
         setAllQuestions()
-
         countdown()
-
-
     }
 
 
     fun countdown(){
         var duration:Long= TimeUnit.SECONDS.toMillis(10)
-
 
         object : CountDownTimer(duration, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -85,7 +69,6 @@ class MainActivity2 : AppCompatActivity() {
                         TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)))
 
                 countDown.text = sDuration
-
             }
             override fun onFinish() {
                 index++
@@ -95,27 +78,18 @@ class MainActivity2 : AppCompatActivity() {
                     resetBackground()
                     enableButton()
                     countdown()
-
                 }
                 else{
-
                     gameResult()
-
                 }
-
             }
-
-
         }.start()
-
     }
 
     private fun correctAns(option: Button){
         option.background=getDrawable(R.drawable.right)
 
         correctAnswerCount++
-
-
     }
     private fun wrongAns(option: Button){
 
@@ -228,8 +202,5 @@ class MainActivity2 : AppCompatActivity() {
             backToast?.show()
         }
         backPressedTime = System.currentTimeMillis()
-
     }
-
-
 }

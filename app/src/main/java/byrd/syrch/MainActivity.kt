@@ -26,11 +26,13 @@ class MainActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        val userId = auth.currentUser?.uid
 
-//        if(auth.currentUser == null){
-//            val intent = Intent(this, byrd.syrch.auth.AuthOptions::class.java)
-//            startActivity(intent)
-//        }
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, byrd.syrch.auth.AuthOptions::class.java)
+            startActivity(intent)
+        }
 
         val mapFragment = Map()
         val settingsFragment = Settings()

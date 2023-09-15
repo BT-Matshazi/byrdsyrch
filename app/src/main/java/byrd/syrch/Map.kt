@@ -17,6 +17,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import byrd.syrch.databinding.FragmentMapBinding
 import byrd.syrch.mapData.hotspotsItem
+import com.google.firebase.auth.FirebaseAuth
 import com.mapbox.api.directions.v5.models.Bearing
 import com.mapbox.api.directions.v5.models.RouteOptions
 import com.mapbox.bindgen.Expected
@@ -91,7 +92,6 @@ import kotlin.collections.Map
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
-
 /**
  * A simple [Fragment] subclass.
  * Use the [Map.newInstance] factory method to
@@ -123,8 +123,9 @@ class Map : Fragment() {
 
     private lateinit var viewportDataSource: MapboxNavigationViewportDataSource
 
-
     private val pixelDensity = Resources.getSystem().displayMetrics.density
+
+    private lateinit var auth: FirebaseAuth
 
     private val overviewPadding: EdgeInsets by lazy {
         EdgeInsets(
@@ -630,6 +631,9 @@ class Map : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        auth = FirebaseAuth.getInstance()
+
+        val userId = auth.currentUser?.uid
         //temp markers
         var annotationApi : AnnotationPlugin? = null
         lateinit var annotationConfig: AnnotationConfig
