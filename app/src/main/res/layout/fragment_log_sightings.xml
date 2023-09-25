@@ -21,13 +21,13 @@
             android:text="New Bird Sighting"
             android:textColor="@color/white"
             android:textSize="32sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintBottom_toTopOf="@+id/birdName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/birdName"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="28dp"
@@ -37,13 +37,13 @@
             android:inputType="textPersonName"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/date"
-            app:layout_constraintEnd_toEndOf="@+id/date"
-            app:layout_constraintStart_toStartOf="@+id/date"
+            app:layout_constraintBottom_toTopOf="@+id/sightingDate"
+            app:layout_constraintEnd_toEndOf="@+id/sightingDate"
+            app:layout_constraintStart_toStartOf="@+id/sightingDate"
             app:layout_constraintTop_toBottomOf="@+id/entryHeading" />
 
         <EditText
-            android:id="@+id/date"
+            android:id="@+id/sightingDate"
             android:layout_width="353dp"
             android:layout_height="0dp"
             android:layout_marginStart="19dp"
@@ -53,12 +53,12 @@
             android:hint="Date Sighted"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/location"
+            app:layout_constraintBottom_toTopOf="@+id/sightingLocation"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/birdName" />
 
         <EditText
-            android:id="@+id/location"
+            android:id="@+id/sightingLocation"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -71,9 +71,9 @@
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/button"
-            app:layout_constraintEnd_toEndOf="@+id/date"
+            app:layout_constraintEnd_toEndOf="@+id/sightingDate"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/date" />
+            app:layout_constraintTop_toBottomOf="@+id/sightingDate" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -84,7 +84,7 @@
             android:layout_marginEnd="1dp"
             app:layout_constraintEnd_toStartOf="@+id/button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintTop_toBottomOf="@+id/sightingLocation"
             android:src="@drawable/add_image_icon" />
 
         <Button
@@ -93,13 +93,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="95dp"
             android:text="Upload Image"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/addSighting"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/location" />
+            app:layout_constraintTop_toBottomOf="@+id/sightingLocation" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/addSighting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
