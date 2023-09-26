@@ -71,6 +71,7 @@ class SightingsList : Fragment() {
         val userId = auth.currentUser?.uid
 
         if (userId != null) {
+            Toast.makeText(requireContext(), "getting data - User ID: $userId", Toast.LENGTH_SHORT).show()
             getSightingList(userId)
         }
         // Set the adapter
@@ -92,6 +93,8 @@ class SightingsList : Fragment() {
                         SightingArrayList.add(listData!!)
                     }
                 }
+
+                Toast.makeText(requireContext(), "SightingArrayList: $SightingArrayList", Toast.LENGTH_SHORT).show()
                 // Update the filtered list
                 filterSightingList(search.query.toString())
             }
