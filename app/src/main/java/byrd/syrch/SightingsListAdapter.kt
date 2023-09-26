@@ -2,6 +2,7 @@ package byrd.syrch
 
 import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import byrd.syrch.birdData.SightingData
@@ -15,18 +16,11 @@ import byrd.syrch.placeholder.PlaceholderContent
 class SightingsListAdapter(private val values: ArrayList<SightingData>) : RecyclerView.Adapter<SightingsListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sightings_item,
-            parent, false)
-
-        return ViewHolder(
-            FragmentSightingsItemListBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
-        )
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.sightings_item, parent, false)
+        return ViewHolder(itemView)
     }
+
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
@@ -39,16 +33,14 @@ class SightingsListAdapter(private val values: ArrayList<SightingData>) : Recycl
 
     override fun getItemCount(): Int = values.size
 
-    inner class ViewHolder(binding: FragmentSightingsItemListBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-
-        val birdName : TextView = itemView.findViewById(R.id.birdName)
-        val sightingDate : TextView = itemView.findViewById(R.id.sightingDate)
-        val sightingLocation : TextView = itemView.findViewById(R.id.sightingLocation)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val birdName: TextView = itemView.findViewById(R.id.birdName)
+        val sightingDate: TextView = itemView.findViewById(R.id.sightingDate)
+        val sightingLocation: TextView = itemView.findViewById(R.id.sightingLocation)
 
         override fun toString(): String {
-            return super.toString() + " '"  + "'"
+            return super.toString() + " '" + "'"
         }
     }
+
 }
